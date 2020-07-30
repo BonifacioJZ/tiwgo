@@ -9,12 +9,9 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var host = "localhost"
-var port = 27017
-
 //MongoCN es el objeto de la conexion ala base de datos
 var MongoCN = ConnectDB()
-var clientOptions = options.Client().ApplyURI(fmt.Sprintf("mongodb://%s:%d", host, port))
+var clientOptions = options.Client().ApplyURI(fmt.Sprintf("mongodb+srv://reb_jz:fOsAtOTHcC8NXEqW@reb.iefiq.azure.mongodb.net/tiwgo?retryWrites=true&w=majority"))
 
 /*Es una funcion para conectar a la base de datos*/
 func ConnectDB() *mongo.Client {
