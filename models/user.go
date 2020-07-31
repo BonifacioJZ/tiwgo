@@ -11,7 +11,7 @@ type User struct {
 	ID              primitive.ObjectID `bson:"_id,omitempty" json:"id"`
 	Nombre          string             `bson:"name" json:"name,omitempty" valid:"alphanum,required"`
 	Apellidos       string             `bson:"last_name" json:"last_name,omitempty" valid:"alphanum,required" `
-	FechaNacimiento time.Time          `bson:"nacimiento" json:"nacimienti,omitempty" valid:"alphanum,required"`
+	FechaNacimiento time.Time          `bson:"nacimiento" json:"nacimienti,omitempty" valid:"required"`
 	Email           string             `bson:"email" json:"email" valid:"email,required"`
 	Password        string             `bson:"password" json:"password,omitempty" valid:"length(6|32),required" `
 	Avater          string             `bson:"avatar" json:"avatar,omitempty" valid:"optional"`
