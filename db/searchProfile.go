@@ -12,27 +12,26 @@ import (
 )
 
 //Funcion para buscar perfil
-func SearchProfile(ID string)(models.User,error){
-	ctx,cancel := context.WithTimeout(context.Background(),time.Second*15)
+func SearchProfile(ID string) (models.User, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*15)
 	defer cancel()
 
 	db := MongoCN.Database("tiwgo")
 	col := db.Collection("users")
 
 	var profile models.User
-	ojbId,_:= primitive.ObjectIDFromHex(ID)
+	ojbId, _ := primitive.ObjectIDFromHex(ID)
 
 	condition := bson.M{
-		"_id":ojbId,
+		"_id": ojbId,
 	}
 
-	err := col.FindOne(ctx,condition).Decode(&profile)
-	profile.Password =""
-	if err != nil{
-		fmt.Println("registro no encontrado"+err.Error())
-		return profile,err
+	err := col.FindOne(ctx, condition).Decode(&profile)
+	profile.Password = ""
+	if err != nil {
+		fmt.Println("registro no encontrado" + err.Error())
+		return profile, err
 	}
-	return profile,nil
-
+	return profile, nil
 
 }

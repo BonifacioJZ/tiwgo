@@ -19,10 +19,10 @@ func UpdateUser(user models.User, Id string) (bool, error) {
 
 	registro := make(map[string]interface{})
 	if len(user.Nombre) > 0 {
-		registro["nombre"] = user.Nombre
+		registro["name"] = user.Nombre
 	}
 	if len(user.Apellidos) > 0 {
-		registro["apellidos"] = user.Apellidos
+		registro["last_name"] = user.Apellidos
 	}
 	registro["nacimiento"] = user.FechaNacimiento
 	if len(user.Avater) > 0 {
