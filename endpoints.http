@@ -1,0 +1,18 @@
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email":"revanjz6@gmail.com",
+    "password":"ghost6699"
+}
+
+###
+
+
+POST   http://localhost:8080/tweet
+
+Content-Type: application/json
+Authorization:BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI0OWVmMTNkMTIwNjE1ODRlMGM3MjEiLCJiaW9ncmFmaWEiOiIiLCJlbWFpbCI6InJldmFuano2QGdtYWlsLmNvbSIsImV4cCI6MTU5NzE4NzMyOCwiZmVjaGFfbmFjaW1laW50byI6IjAwMDEtMDEtMDFUMDA6MDA6MDBaIiwibm9tYnJlIjoianVhbiIsInNpdGlvd2ViIjoiIiwidWJpY2FjaW9uIjoiIn0.Rm5-Pfn8QHxNbfGisWvoQRO_Pkm7BLCfxHgT5jq__pQ
+{
+    "message":"hola mundo"
+}
